@@ -1,13 +1,211 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family:'Spartan' ;
+        src: url('../public/fonts/LeagueSpartan-Regular.woff2') format('woff2-variations');
+    }
+    @font-face {
+        font-family:'Spartan-Bold' ;
+        src: url('../public/fonts/LeagueSpartan-Bold.woff2') format('woff2-variations');
+    }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+    .circBtnHome {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        width: 3.5rem; 
+        height: 3.5rem; 
+        border-radius: 50%;
+        background: #c4c3c1;
+        box-shadow:  5px 5px 15px #a5a4a2,
+                    -5px -5px 15px #e3e2e0;
+    }
+    .btnHomeGris {
+        display: inline-flex; 
+        padding: 0.75rem; 
+        display: inline-flex; 
+        align-items: center; 
+        width: 18rem; 
+        height: auto; 
+        border-radius: 40px; 
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        background: rgb(202,201,197);
+        background: radial-gradient(circle, rgba(202,201,197,1) 51%, rgba(181,178,180,1) 100%);
+        margin: 0.5rem 0rem 0.5rem; 
+    };
 }
+
+.iconoBtnHome {
+    @apply
+        h-9 
+        w-9 
+        text-iconoBtn
+}
+.redesBotonesHome {
+    @apply
+        flex 
+        justify-center 
+        items-center
+        w-14 
+        h-14
+        rounded-full
+        bg-verde
+        shadow-lg
+};
+
+.s2Div {
+    @apply
+        inline-flex 
+        items-center 
+        w-80
+        my-8
+}
+
+.s2Caja {
+    @apply
+        w-16 
+        h-16 
+        bg-ciruela 
+        text-center 
+        text-white 
+        font-extrabold
+}
+
+.s2Titulo {
+    @apply
+        text-2xl 
+        font-spartanB 
+        text-center 
+        w-64 
+        ml-2
+}
+
+.s2Texto {
+    @apply
+        text-center 
+        p-4
+}
+
+.s3Div {
+    @apply
+        inline-flex 
+        items-center 
+        w-80
+        my-8
+}
+
+.s3Caja {
+    @apply
+        w-16 
+        h-16 
+        bg-verde 
+        text-center 
+        text-white 
+        font-extrabold
+}
+
+.s3Titulo {
+    @apply
+        text-2xl 
+        font-spartanB 
+        text-center 
+        w-64 
+        ml-2
+}
+
+.s3List {
+    @apply
+        list-none 
+        text-left 
+        m-5 
+}
+
+.s5Div {
+    @apply
+        inline-flex 
+        items-center 
+        w-80
+        my-8
+}
+
+.s5Caja {
+    @apply
+        w-20 
+        h-20 
+        bg-ciruela
+        rounded-full
+        border-4
+        border-verde 
+        text-center 
+        text-white 
+        font-extrabold
+}
+
+.s5Texto {
+    @apply
+        text-xl 
+        text-left 
+        w-56 
+        ml-2
+}
+
+.s6Div {
+    @apply
+        inline-flex 
+        items-start 
+        w-80
+        my-8
+}
+
+.s6Caja {
+    @apply
+        w-12 
+        h-12
+        rounded-full
+        text-center 
+        text-white 
+        font-extrabold
+}
+
+.s6Texto {
+    @apply
+        text-lg 
+        text-left 
+        w-56 
+        ml-2
+}
+
+.s8Div {
+    @apply
+        inline-flex 
+        items-start 
+        w-80
+        my-8
+}
+
+.s8Caja {
+    @apply
+        w-28 
+        h-14 
+        bg-verde
+        rounded-full
+        border-4
+        border-ciruela 
+        text-center 
+        text-white 
+        font-extrabold
+}
+
+.s8Texto {
+    @apply
+        text-xl 
+        text-left 
+        w-56 
+        ml-2
+}
+
